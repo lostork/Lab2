@@ -213,10 +213,14 @@ public class DAO {
 						authorID = result.getInt(1);
 					}
 				} 
-				
-				statement.executeUpdate("update Book " + 
-										"set AuthorID = " + authorID +
-										" where ISBN = '" + ISBN + "';");	
+				if (authorID <= 0) {
+					throw new Exception("no author");
+				} else {
+					statement.executeUpdate("update Book " + 
+							"set AuthorID = " + authorID +
+							" where ISBN = '" + ISBN + "';");	
+					
+				}
 			}
 			
 			if (!Publisher.equals("")) {
