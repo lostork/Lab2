@@ -198,83 +198,30 @@ public class DAO {
 	public static void updateBookInfoSelectedByISBN(String ISBN, String AuthorName, String Publisher, String PublishDate, double Price)
 								throws Exception{
 		
-		try (Connection connection = getConnection()) {
-			System.out.println(ISBN);
-			java.sql.Statement statement = connection.createStatement();
-			if (!AuthorName.equals("")) {
-				
-				int authorID = 0;
-				
-				try (ResultSet result = statement.executeQuery("select AuthorID " + 
-																"from Author " + 
-																"where AuthorName = '" + AuthorName + "';")) {
-					
-					if (result.next()) {
-						authorID = result.getInt(1);
-					}
-				} 
-				if (authorID <= 0) {
-					throw new Exception("no author");
-				} else {
-					statement.executeUpdate("update Book " + 
-							"set AuthorID = " + authorID +
-							" where ISBN = '" + ISBN + "';");	
-					
-				}
-			}
-			
-			if (!Publisher.equals("")) {
-				statement.executeUpdate("update Book " + 
-										"set Publisher = '" + Publisher + "' " + 
-										"where ISBN = '" + ISBN + "';");
-			}
-			
-			if (!PublishDate.equals("")) {
-				statement.execute("update Book " + 
-										"set PublishDate = '" + PublishDate + "' " + 
-										"where ISBN = '" + ISBN + "';");
-			}
-			
-			if (Math.abs(Price) > 0.0001) {
-				statement.execute("update Book " + 
-						"set Price = " + Price + " " + 
-						"where ISBN = '" + ISBN + "';");
-			}
-			
-			
-			
-		}
-		//		try (Connection connection = getConnection()) {
+//		try (Connection connection = getConnection()) {
 //			System.out.println(ISBN);
 //			java.sql.Statement statement = connection.createStatement();
-//			
-//			
-//			int authorID = 0;
-//			
-//			try (ResultSet result = statement.executeQuery("select AuthorID " + 
-//															"from Author " + 
-//															"where AuthorName = '" + AuthorName + "';")) {
+//			if (!AuthorName.equals("")) {
 //				
-//				if (result.next()) {
-//					authorID = result.getInt(1);
+//				int authorID = 0;
+//				
+//				try (ResultSet result = statement.executeQuery("select AuthorID " + 
+//																"from Author " + 
+//																"where AuthorName = '" + AuthorName + "';")) {
+//					
+//					if (result.next()) {
+//						authorID = result.getInt(1);
+//					}
+//				} 
+//				if (authorID <= 0) {
+//					throw new Exception("no author");
 //				} else {
-//					throw new Exception("no Author");
+//					statement.executeUpdate("update Book " + 
+//							"set AuthorID = " + authorID +
+//							" where ISBN = '" + ISBN + "';");	
+//					
 //				}
-//			} 
-//			
-//			
-//			if (!PublishDate.equals("")) {
-//				statement.execute("update Book " + 
-//										"set PublishDate = '" + PublishDate + "' " + 
-//										"where ISBN = '" + ISBN + "';");
 //			}
-//			
-//			statement.executeUpdate("update Book " + 
-//					"set AuthorID = " + authorID +
-//					" where ISBN = '" + ISBN + "';");	
-//			
-//			
-//			
 //			
 //			if (!Publisher.equals("")) {
 //				statement.executeUpdate("update Book " + 
@@ -282,6 +229,11 @@ public class DAO {
 //										"where ISBN = '" + ISBN + "';");
 //			}
 //			
+//			if (!PublishDate.equals("")) {
+//				statement.execute("update Book " + 
+//										"set PublishDate = '" + PublishDate + "' " + 
+//										"where ISBN = '" + ISBN + "';");
+//			}
 //			
 //			if (Math.abs(Price) > 0.0001) {
 //				statement.execute("update Book " + 
@@ -291,7 +243,56 @@ public class DAO {
 //			
 //			
 //			
-//		} 
+//		}
+			try (Connection connection = getConnection()) {
+			System.out.println(ISBN);
+			java.sql.Statement statement = connection.createStatement();
+			
+			
+			int authorID = 0;
+			
+			try (ResultSet result = statement.executeQuery("select AuthorID " + 
+															"from Author " + 
+															"where AuthorName = '" + AuthorName + "';")) {
+				
+				if (result.next()) {
+					authorID = result.getInt(1);
+				} else {
+					throw new Exception("no Author");
+				}
+			} 
+			
+			
+			if (!PublishDate.equals("")) {
+				statement.executeUpdate("update Book " + 
+										"set PublishDate = '" + PublishDate + "' " + 
+										"where ISBN = '" + ISBN + "';");
+				
+			}
+			
+			statement.executeUpdate("update Book " + 
+					"set AuthorID = " + authorID +
+					" where ISBN = '" + ISBN + "';");	
+			
+			
+			
+			
+			if (!Publisher.equals("")) {
+				statement.executeUpdate("update Book " + 
+										"set Publisher = '" + Publisher + "' " + 
+										"where ISBN = '" + ISBN + "';");
+			}
+			
+			
+			if (Math.abs(Price) > 0.0001) {
+				statement.executeUpdate("update Book " + 
+						"set Price = " + Price + " " + 
+						"where ISBN = '" + ISBN + "';");
+			}
+			
+			
+			
+		} 
 		
 	}
 	
@@ -316,10 +317,7 @@ public class DAO {
 			e.printStackTrace();
 		}
 		
-//		for (Book book : books) {
-//			System.out.println(book.getAuthor());
-//		}
-		
+
 		context.getSession().put("daotip", "getBooks success");
 		return books;
 	}
