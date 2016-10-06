@@ -195,7 +195,8 @@ public class DAO {
 	}
 	
 	
-	public static void updateBookInfoSelectedByISBN(String ISBN, String AuthorName, String Publisher, String PublishDate, double Price){
+	public static void updateBookInfoSelectedByISBN(String ISBN, String AuthorName, String Publisher, String PublishDate, double Price)
+								throws Exception{
 		
 		try (Connection connection = getConnection()) {
 			System.out.println(ISBN);
@@ -211,10 +212,7 @@ public class DAO {
 					if (result.next()) {
 						authorID = result.getInt(1);
 					}
-				} catch (Exception e) {
-					// TODO: handle exception
-					e.printStackTrace();
-				}
+				} 
 				
 				statement.executeUpdate("update book " + 
 										"set AuthorID = " + authorID +
@@ -241,10 +239,7 @@ public class DAO {
 			
 			
 			
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
-		
 		//		try (Connection connection = getConnection()) {
 //			System.out.println(ISBN);
 //			java.sql.Statement statement = connection.createStatement();

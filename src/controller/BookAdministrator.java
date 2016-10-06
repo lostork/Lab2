@@ -137,7 +137,7 @@ public class BookAdministrator extends ActionSupport{
 		context.getSession().put("isbn", isbn);
 		return SUCCESS;
 	}
-	public String update() {
+	public String update() throws Exception{
 //		ActionContext context = ActionContext.getContext();
 //		isbn = (String) context.getSession().get("isbn");
 //		System.out.println(isbn);
@@ -155,7 +155,12 @@ public class BookAdministrator extends ActionSupport{
 		ActionContext context = ActionContext.getContext();
 		isbn = (String) context.getSession().get("isbn");
 		System.out.println(isbn);
-		DAO.updateBookInfoSelectedByISBN(isbn, authorName, publisher, publishDate, price);
+		
+		try {
+			DAO.updateBookInfoSelectedByISBN(isbn, authorName, publisher, publishDate, price);
+		} finally {
+			;
+		}
 		return SUCCESS;
 	}
 	
