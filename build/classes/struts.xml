@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="controller" extends="struts-default" >
+        <action name="display" class="controller.BookAdministrator"  method="display">
+            <result>display.jsp</result>
+        </action>
+        <action name = "Remove" class="controller.BookAdministrator" method = "remove">
+        	<result type = "redirect"> display.action </result>
+        </action>
+        <action name = "QueryByTitle" class="controller.BookAdministrator" method = "queryByTitle">
+        	<result> queryByTitle.jsp </result>
+        </action>
+        <action name = "QueryByAuthorName" class="controller.BookAdministrator" method = "queryByAuthorName">
+        	<result> queryByAuthorName.jsp</result>
+        </action>
+        <action name = "Edit" class="controller.BookAdministrator" method = "edit">
+        	<result> edit.jsp</result>
+        </action>
+        <action name = "Update" class="controller.BookAdministrator" method = "update">
+        	<result type = "redirect"> display.action </result>
+        </action>
+        <action name = "AddBook" class="controller.BookAdministrator" method = "addBook">
+        	<result> addBook.jsp </result>
+        </action>
+        <action name = "AddAuthor" class="controller.BookAdministrator" method = "addAuthor">
+        	<result> addAuthor.jsp</result>
+        </action>
+        <action name = "Store" class="controller.BookAdministrator" method = "store">
+        	<result name = "error"> error.jsp </result>
+        	<result name = "success">success.jsp</result>
+        </action>
+        
+    </package>
+</struts>
