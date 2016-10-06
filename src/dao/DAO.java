@@ -15,8 +15,8 @@ import com.opensymphony.xwork2.ActionContext;
 
 public class DAO {
 
-	private static String url = new String("jdbc:mysql://localhost:3306/bookDB");
-	//private static String url = new String("jdbc:mysql://uffdldhjtgwc.rds.sae.sina.com.cn:10352/bookdb");
+	//private static String url = new String("jdbc:mysql://localhost:3306/bookDB");
+	private static String url = new String("jdbc:mysql://uffdldhjtgwc.rds.sae.sina.com.cn:10352/bookdb");
 	private static String userName = new String("root");
 	private static String password = new String("15926487300");
 	
@@ -206,7 +206,7 @@ public class DAO {
 				int authorID = 0;
 				
 				try (ResultSet result = statement.executeQuery("select AuthorID " + 
-																"from author " + 
+																"from Author " + 
 																"where AuthorName = '" + AuthorName + "';")) {
 					
 					if (result.next()) {
@@ -214,25 +214,25 @@ public class DAO {
 					}
 				} 
 				
-				statement.executeUpdate("update book " + 
+				statement.executeUpdate("update Book " + 
 										"set AuthorID = " + authorID +
 										" where ISBN = '" + ISBN + "';");	
 			}
 			
 			if (!Publisher.equals("")) {
-				statement.executeUpdate("update book " + 
+				statement.executeUpdate("update Book " + 
 										"set Publisher = '" + Publisher + "' " + 
 										"where ISBN = '" + ISBN + "';");
 			}
 			
 			if (!PublishDate.equals("")) {
-				statement.execute("update book " + 
+				statement.execute("update Book " + 
 										"set PublishDate = '" + PublishDate + "' " + 
 										"where ISBN = '" + ISBN + "';");
 			}
 			
 			if (Math.abs(Price) > 0.0001) {
-				statement.execute("update book " + 
+				statement.execute("update Book " + 
 						"set Price = " + Price + " " + 
 						"where ISBN = '" + ISBN + "';");
 			}
