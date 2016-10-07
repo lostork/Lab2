@@ -22,7 +22,8 @@
         	<result> edit.jsp</result>
         </action>
         <action name = "Update" class="controller.BookAdministrator" method = "update">
-        	<result type = "redirect"> display.action </result>
+        	<result name = "error"> error.jsp </result>
+        	<result name = "success">success.jsp</result>
         </action>
         <action name = "AddBook" class="controller.BookAdministrator" method = "addBook">
         	<result> addBook.jsp </result>

@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import com.opensymphony.xwork2.ActionContext;
-
+import validdatetest.*;
 public class DAO {
 
 	//private static String url = new String("jdbc:mysql://localhost:3306/bookDB");
@@ -261,6 +261,11 @@ public class DAO {
 					throw new Exception("no Author");
 				}
 			} 
+			
+			
+			if (!ValidDateTest.valiDateTimeWithLongFormat(PublishDate)) {
+				throw new Exception("Publish Date Invalid");
+			}
 			
 			
 			if (!PublishDate.equals("")) {

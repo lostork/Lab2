@@ -138,30 +138,28 @@ public class BookAdministrator extends ActionSupport{
 		return SUCCESS;
 	}
 	public String update(){
-//		ActionContext context = ActionContext.getContext();
-//		isbn = (String) context.getSession().get("isbn");
-//		System.out.println(isbn);
-//		
-//		try {
-//			DAO.updateBookInfoSelectedByISBN(isbn, authorName, publisher, publishDate, price);
-//			return SUCCESS;
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			context.getSession().put("tip", "Invalid Book Info.");
-//			e.printStackTrace();
-//			return ERROR;
-//		}
-//		
 		ActionContext context = ActionContext.getContext();
 		isbn = (String) context.getSession().get("isbn");
 		System.out.println(isbn);
 		
 		try {
 			DAO.updateBookInfoSelectedByISBN(isbn, authorName, publisher, publishDate, price);
+			return SUCCESS;
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			context.getSession().put("tip", "Invalid Book Info.");
 			e.printStackTrace();
+			return ERROR;
 		}
-		return SUCCESS;
+		
+//		ActionContext context = ActionContext.getContext();
+//		isbn = (String) context.getSession().get("isbn");
+//		System.out.println(isbn);
+//		
+//		try {
+//			DAO.updateBookInfoSelectedByISBN(isbn, authorName, publisher, publishDate, price);
+//		} 
+//		return SUCCESS;
 	}
 	
 	public String addBook() {
