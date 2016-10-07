@@ -22,7 +22,7 @@
 	</s:form>
 	<br/>
 	说明：Author Name 和Publish Date 为必填项，其中Author Name 对应的作者应已在数据库中存在，Publish Date 格式应正确，否则会提示输入信息无效
-	未填项表示该项内容不变。
+	<br/>未填项表示该项内容不变。
 	
 </body>
 </html>
