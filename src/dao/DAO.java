@@ -366,7 +366,7 @@ public class DAO {
 	      
 		ActionContext context = ActionContext.getContext();
 		try {
-			Class.forName("com.mysql.jdbc.Driver");     //¼ÓÔØMYSQL JDBCÇý¶¯³ÌÐò   
+			Class.forName("com.mysql.jdbc.Driver");     //ï¿½ï¿½ï¿½ï¿½MYSQL JDBCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   
 			//Class.forName("org.gjt.mm.mysql.Driver");
 			System.out.println("Success loading Mysql Driver!");
 //			context.getSession().put("sqltip", "Success loading Mysql Driver!");
