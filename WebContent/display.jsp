@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <%@taglib prefix="s" uri="/struts-tags" %>
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Book List</title>
 <style type="text/css">
         table {
@@ -85,7 +85,9 @@
     	<s:textfield name = "authorName" label="Author Name"/>
     	<s:submit/>
     </s:form>
-           
+    <br/>
+    说明：上表中的Edit按钮即为功能5更新图书信息
+    
 </body>
 
 </html>
