@@ -10,35 +10,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Welcome to Book Administration System</title>
 <link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css">  
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <style type="text/css">
 
 
-div
-{
-	background-color: #333333
-}
+
 
 
 .headfont {
 	font-family: Arial, Helvetica, sans-serif;
+	margin-left:auto;
+margin-right:auto;
+width:100%;
 	position: absolute;
 	left: 0px;
 	top: 145px;
-	width: 1268px;
-	height: 224px;
 	color: #FFF;
 	font-size: 36px;
 }
 .headfont div a {
 	color: #CCC;
+	font-size: 28px;
 }
 </style>
 
 </head>
 <body>
+<img src="images/t.png" class="img-responsive" alt="Cinque Terre"> 
 <div class = "headfont">
-	<h2 align="center">Welcome to Book Administration System</h2>
-	<div align="center"><a href='<s:url action="display"></s:url>'> Enter the System </a></div>
+	<h2 align="center">Welcome to Book Administration System	</h2>
+	<div align="center">
+	  <p>&nbsp;</p>
+	  <p><a href='<s:url action="display"></s:url>'>Enter the System </a></p>
+	</div>
 	<p align="center">&nbsp;</p>
 </div>
 

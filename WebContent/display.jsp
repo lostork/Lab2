@@ -8,6 +8,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Book List</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">  
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="main.css" />
 
 <style type="text/css">
@@ -26,12 +32,34 @@
             border: 1px solid black;
             padding: 3px;
         }
+.center
+{
+margin-left:auto;
+margin-right:auto;
+width:70%;
+filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
+		background-color:#FFFFFF;
+		padding:20px;
+		margin-top:20px;
+		margin-bottom:20px;
+}
+
+
+body
+  { 
+    background-image:url('images/t.png');
+    background-repeat:no-repeat;
+    background-position:center;
+  }
     </style>
 </head>
-<body>    
-    <h2>Book List</h2>
+<body>
+ 
+<div class="center">  
 
-    	<table>
+    <h2 align="center">Book List</h2>
+
+    	<table  class="table table-striped">
     	<thead>
                 <tr>
                     
@@ -71,25 +99,34 @@
            </s:iterator>
         </tbody>
         </table>
-        <br/>
-        <a href='<s:url action="AddBook"></s:url>'>
-                                Add New Book
-                            </a>
-                            &nbsp;
-        <a href='<s:url action="AddAuthor"></s:url>'>
-                                Add New Author
-                            </a>   
-                                            
-    <br/>
+        <div align="center"><br/>
+          <a href='<s:url action="AddBook"></s:url>'>
+            Add New Book
+          </a>
+          &nbsp;
+          <a href='<s:url action="AddAuthor"></s:url>'>
+            Add New Author
+          </a>   
+          
+          <br/>
+          
+        </div>
+    <h2 align="center">Query Books Written By the Author:</h2>
+    <div align="center">
     
-    <h2>Query Books Written By the Author:</h2>
-    <s:form action = "QueryByAuthorName">
-    	<s:textfield name = "authorName" label="Author Name"/>
-    	<s:submit/>
+    <s:form action = "QueryByAuthorName" role="form">
+    	<div class="form-group">
+    	  <s:textfield name = "authorName"  class = "form-control" placeholder="Please input Name"/>
+    	  <s:submit class = "form-control"/>
+  	  </div>
     </s:form>
-    <br/>
+    </div>
+    <div align="center"><br/>
     说明：上表中的Edit按钮即为功能5更新图书信息
     
+    </div>
+    </div>
+   
 </body>
 
 </html>
