@@ -201,10 +201,8 @@ public class DAO {
 //		try (Connection connection = getConnection()) {
 //			System.out.println(ISBN);
 //			java.sql.Statement statement = connection.createStatement();
-//			if (!AuthorName.equals("")) {
-//				
+//			if (!AuthorName.equals("")) {		
 //				int authorID = 0;
-//				
 //				try (ResultSet result = statement.executeQuery("select AuthorID " + 
 //																"from Author " + 
 //																"where AuthorName = '" + AuthorName + "';")) {

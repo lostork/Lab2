@@ -11,6 +11,7 @@
 	<h2>Error</h2> 
 	${sessionScope.tip}
 	<br/>
+	
 	<a href='<s:url action="display"></s:url>'>
                                 Back To Book List
                             </a>
