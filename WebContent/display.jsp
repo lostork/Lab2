@@ -8,6 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Book List</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
+
 <style type="text/css">
         table {
             border: 1px solid black;

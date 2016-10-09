@@ -15,10 +15,10 @@ import com.opensymphony.xwork2.ActionContext;
 import validdatetest.*;
 public class DAO {
 
-	//private static String url = new String("jdbc:mysql://localhost:3306/bookDB");
+	private static String url = new String("jdbc:mysql://localhost:3306/bookDB");
 	//private static String url = new String("jdbc:mysql://mmrcehspavoo.rds.sae.sina.com.cn:10593/bookdb");
 	
-	private static String url = new String("jdbc:mysql://uffdldhjtgwc.rds.sae.sina.com.cn:10352/bookdb");
+	//private static String url = new String("jdbc:mysql://uffdldhjtgwc.rds.sae.sina.com.cn:10352/bookdb");
 	private static String userName = new String("root");
 	private static String password = new String("15926487300");
 	
