@@ -7,27 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New Author</title>
-<style type="text/css">
-body
-  { 
-    background-image:url('images/t.png');
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-.center
-{
-margin-left:auto;
-margin-right:auto;
-width:70%;
-filter:alpha(Opacity=80);-moz-opacity:0.5;opacity:0.8;
-		background-color:#000000;
-		padding:20px;
-		margin-top:20px;
-		margin-bottom:20px;
-}
 
-    </style>
 <link rel="stylesheet" href="css/bootstrap.min.css">  
+<link rel="stylesheet" type="text/css" href="main.css" />
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 
@@ -36,8 +18,9 @@ filter:alpha(Opacity=80);-moz-opacity:0.5;opacity:0.8;
 </head>
 <body>
 <div class="center">
-	<h3 style="color:white">Add New Author</h3>
-	<s:form action = "Store" role="form">
+	<h3 align="center" >Add New Author</h3>
+	<br/>
+	<!--<s:form action = "Store" role="form">
 	<div class="form-group">
 		<s:textfield name="authorName" label="Author Name" class="form-control"/>
         <s:textfield name="age" label="Age" class="form-control"/>
@@ -45,7 +28,43 @@ filter:alpha(Opacity=80);-moz-opacity:0.5;opacity:0.8;
         
         <s:submit />
     </div>
-	</s:form>
+	</s:form>-->
+	
+	<form action = "Store" class = "form-horizontal" role="form">
+		<div class = "form-group">
+		<label for = "AuthorName" class = "col-md-3 control-label"> Author Name</label>
+			<div class = "col-md-7">
+				<input type = "text" name = "authorName" class="form-control" id="AuthorName" >
+			</div>
+		</div>
+		
+		<div class = "form-group">
+		<label for = "Age" class = "col-md-3 control-label"> Age</label>
+			<div class = "col-md-7">
+				<input type = "text" name="age" class="form-control" id="Age" >
+			</div>
+		</div>
+		
+		<div class = "form-group">
+		<label for = "Country" class = "col-md-3 control-label"> Country</label>
+			<div class = "col-md-7">
+				<input type = "text" name="country" class="form-control" id="Country" >
+			</div>
+		</div>
+		
+		
+		<br/>
+		<div align="center">
+		<div class = "form-group">
+		
+		<button type="submit"  class="btn btn-default">Submit</button>
+		
+		</div>
+		</div>
+	</form>
+	
+	
+	
 </div>
 
 </body>

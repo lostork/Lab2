@@ -15,7 +15,6 @@
 body
   { 
     background-image:url('images/t.png');
-    background-repeat:no-repeat;
     background-position:center;
   }
 .center
@@ -23,8 +22,8 @@ body
 margin-left:auto;
 margin-right:auto;
 width:70%;
-filter:alpha(Opacity=80);-moz-opacity:0.5;opacity:0.8;
-		background-color:#000000;
+filter:alpha(Opacity=90);-moz-opacity:0.9;opacity:0.9;
+		background-color:#FFFFFF;
 		padding:20px;
 		margin-top:20px;
 		margin-bottom:20px;
@@ -38,10 +37,16 @@ filter:alpha(Opacity=80);-moz-opacity:0.5;opacity:0.8;
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="main.css">  
+
 </head>
 <body>
-<div class="center">
-	<s:form action = "Update">
+<div class = "container">
+	<div class="row">
+	<div class="center">
+	
+	<!--<s:form action = "Update">
 	
 		<s:textfield name="authorName" label="Author Name" />
         <s:textfield name="publisher" label="Publisher" />
@@ -49,13 +54,59 @@ filter:alpha(Opacity=80);-moz-opacity:0.5;opacity:0.8;
         <s:textfield name="price" label="Price" />
         
         <s:submit />
-	</s:form>
+	</s:form>-->
+	<h2 align = "center">Edit Book Info</h2>
+	<br/>
+	<form action = "Update" class = "form-horizontal" role="form">
+		<div class = "form-group">
+		<label for = "AuthorName" class = "col-md-3 control-label"> Author Name</label>
+			<div class = "col-md-7">
+				<input type = "text" name = "authorName" class="form-control" id="AuthorName" >
+			</div>
+		</div>
+		
+		<div class = "form-group">
+		<label for = "Publisher" class = "col-md-3 control-label"> Publisher</label>
+			<div class = "col-md-7">
+				<input type = "text" name="publisher" class="form-control" id="Publisher" >
+			</div>
+		</div>
+		
+		<div class = "form-group">
+		<label for = "PublishDate" class = "col-md-3 control-label"> Publish Date</label>
+			<div class = "col-md-7">
+				<input type = "text" name="publishDate" class="form-control" id="PublishDate" >
+			</div>
+		</div>
+		
+		
+		<div class = "form-group">
+		<label for = "Price" class = "col-md-3 control-label"> Price</label>
+			<div class = "col-md-7">
+				<input type = "text"  name = "price" class="form-control" id="Price" >
+			</div>
+		</div>
+		<br/>
+		<div align="center">
+		<div class = "form-group">
+		
+		<button type="submit"  class="btn btn-default">Submit</button>
+		
+		</div>
+		</div>
+	</form>
+	
+	
+	<p style = "padding:30px">
 	<br/>
 	说明：Author Name 和Publish Date 为必填项，其中Author Name 对应的作者应已在数据库中存在，Publish Date 格式应正确，否则会提示输入信息无效
 	<br/>未填项表示该项内容不变。
 	<br/>特别注明：
 	<br/>本功能不知道为什么有时候会不好使，在tomcat上随时都好使,自己代码感觉也没问题，在sae上有时候就有问题，尤其是在某次更新数据输入错误之后.
 	<br/>不好使的时候等一会儿或换个书更新，估计就可以更新了，个人感觉是sae给的mysql跟自己的不太一样的缘故
+	</p>
+</div>
+</div>
 </div>
 </body>
 </html>

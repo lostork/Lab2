@@ -20,7 +20,12 @@
 
 
 
-
+body
+  { 
+    background-image:url('images/t.png');
+    
+    background-position:center;
+  }
 
 .headfont {
 	font-family: Arial, Helvetica, sans-serif;
@@ -32,6 +37,7 @@ width:100%;
 	top: 145px;
 	color: #FFF;
 	font-size: 36px;
+	height :400px;
 }
 .headfont div a {
 	color: #CCC;
@@ -41,14 +47,13 @@ width:100%;
 
 </head>
 <body>
-<img src="images/t.png" class="img-responsive" alt="Cinque Terre"> 
+<!-- <img src="images/t.png" class="img-responsive" alt="Cinque Terre">   -->
 <div class = "headfont">
 	<h2 align="center">Welcome to Book Administration System	</h2>
 	<div align="center">
 	  <p>&nbsp;</p>
 	  <p><a href='<s:url action="display"></s:url>'>Enter the System </a></p>
 	</div>
-	<p align="center">&nbsp;</p>
 </div>
 
 </body>
