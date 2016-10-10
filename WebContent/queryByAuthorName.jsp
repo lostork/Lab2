@@ -6,12 +6,24 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="css/bootstrap.min.css">  
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="main.css">  
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Books Written By One Author</title>
 </head>
 <body>
-	<h2>Books Written By <s:property value = "authorName"/> </h2>
-		<table>
+<div class="center">
+	<h2 align ="center">Books Written By <s:property value = "authorName"/> </h2>
+		<table class="table table-striped">
 	<s:iterator value="titles">
 		<tr>
 			<td><s:property/></td>
@@ -22,5 +34,6 @@
 		<a href='<s:url action="display"></s:url>'>
                                 Back To Book List
                             </a>
+</div>
 </body>
 </html>

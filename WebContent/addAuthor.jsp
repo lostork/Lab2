@@ -17,6 +17,8 @@
 <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class = "container">
+	<div class="row">
 <div class="center">
 	<h3 align="center" >Add New Author</h3>
 	<br/>
@@ -66,6 +68,7 @@
 	
 	
 </div>
-
+</div>
+</div>
 </body>
 </html>

@@ -11,25 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit Book Info</title>
 
-<style type="text/css">
-body
-  { 
-    background-image:url('images/t.png');
-    background-position:center;
-  }
-.center
-{
-margin-left:auto;
-margin-right:auto;
-width:70%;
-filter:alpha(Opacity=90);-moz-opacity:0.9;opacity:0.9;
-		background-color:#FFFFFF;
-		padding:20px;
-		margin-top:20px;
-		margin-bottom:20px;
-}
-
-    </style>
     
 <link rel="stylesheet" href="css/bootstrap.min.css">  
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -97,13 +78,14 @@ filter:alpha(Opacity=90);-moz-opacity:0.9;opacity:0.9;
 	</form>
 	
 	
-	<p style = "padding:30px">
+	<p>
 	<br/>
 	说明：Author Name 和Publish Date 为必填项，其中Author Name 对应的作者应已在数据库中存在，Publish Date 格式应正确，否则会提示输入信息无效
-	<br/>未填项表示该项内容不变。
+	未填项表示该项内容不变。
+	<br/>
 	<br/>特别注明：
-	<br/>本功能不知道为什么有时候会不好使，在tomcat上随时都好使,自己代码感觉也没问题，在sae上有时候就有问题，尤其是在某次更新数据输入错误之后.
-	<br/>不好使的时候等一会儿或换个书更新，估计就可以更新了，个人感觉是sae给的mysql跟自己的不太一样的缘故
+	本功能不知道为什么有时候会不好使，在tomcat上随时都好使,自己代码感觉也没问题，在sae上有时候就有问题，尤其是在某次更新数据输入错误之后.
+	不好使的时候重新从首页进一下或等一会儿或换个书更新，估计就可以更新了，个人感觉是sae给的mysql跟自己的不太一样的缘故
 	</p>
 </div>
 </div>

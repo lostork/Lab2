@@ -6,31 +6,26 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="css/bootstrap.min.css">  
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="main.css">  
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Query By Title</title>
-	<style type="text/css">
-        table {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        
-        table thead tr th {
-            border: 1px solid black;
-            padding: 3px;
-            background-color: #cccccc;
-        }
-        
-        table tbody tr td {
-            border: 1px solid black;
-            padding: 3px;
-        }
-    </style>
 
 </head>
 <body>
-
-<h3>Book Info</h3>
-	<table>
+<div class="center">
+<div align="center">
+<h3 align = "center">Book Info</h3>
+	<table class = "table table-striped">
 	<tr>
 		<td>ISBN</td>
 		<td><s:property value = "isbn"/></td>
@@ -57,7 +52,7 @@
 	</tr>
 	</table>
 <h3>Author Info</h3>
-	<table>
+	<table class = "table table-striped">
 	<tr>
 		<td>Author ID</td>
 		<td><s:property value = "authorID"/></td>
@@ -79,5 +74,7 @@
 	<a href='<s:url action="display"></s:url>'>
                                 Back To Book List
                             </a>
+</div>
+</div>
 </body>
 </html>

@@ -55,6 +55,8 @@ body
 </head>
 <body>
  
+<div class = "container">
+	<div class="row">
 <div class="center">  
 
     <h2 align="center">Book List</h2>
@@ -111,22 +113,42 @@ body
           <br/>
           
         </div>
-    <h2 align="center">Query Books Written By the Author:</h2>
-    <div align="center">
+    <!-- <h2 align="center">Query Books Written By the Author:</h2> -->
+    <br/>
     
-    <s:form action = "QueryByAuthorName" role="form">
+    <!--<s:form action = "QueryByAuthorName" role="form">
     	<div class="form-group">
     	  <s:textfield name = "authorName"  class = "form-control" placeholder="Please input Name"/>
     	  <s:submit class = "form-control"/>
   	  </div>
-    </s:form>
-    </div>
+    </s:form>-->
+    
+    	<form action = "QueryByAuthorName" class = "form-horizontal" role="form">
+		<div class = "form-group">
+		<label for = "AuthorName" class = "col-md-4 control-label"> Query Books Written By the Author:</label>
+			<div class = "col-md-6">
+				<input type = "text" name = "authorName" class="form-control" id="AuthorName" placeholder="Please input the Author Name">
+			</div>
+			<div class = "col-md-2">
+				<button type="submit"  class="btn btn-default">Query</button>
+			
+			</div>
+		</div>
+		
+		
+	</form>
+	
+    
+    
+    
+    
     <div align="center"><br/>
     说明：上表中的Edit按钮即为功能5更新图书信息
     
     </div>
     </div>
-   
+   </div>
+   </div>
 </body>
 
 </html>
