@@ -31,9 +31,11 @@
 	</s:iterator>
 		</table>
 		<br/>
+		<div align="center">
 		<a href='<s:url action="display"></s:url>'>
                                 Back To Book List
                             </a>
+        </div>
 </div>
 </body>
 </html>

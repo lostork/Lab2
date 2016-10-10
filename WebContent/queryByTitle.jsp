@@ -74,6 +74,7 @@
 	<a href='<s:url action="display"></s:url>'>
                                 Back To Book List
                             </a>
+    
 </div>
 </div>
 </body>

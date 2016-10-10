@@ -32,25 +32,6 @@
             border: 1px solid black;
             padding: 3px;
         }
-.center
-{
-margin-left:auto;
-margin-right:auto;
-width:70%;
-filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
-		background-color:#FFFFFF;
-		padding:20px;
-		margin-top:20px;
-		margin-bottom:20px;
-}
-
-
-body
-  { 
-    background-image:url('images/t.png');
-    background-repeat:no-repeat;
-    background-position:center;
-  }
     </style>
 </head>
 <body>
@@ -125,8 +106,8 @@ body
     
     	<form action = "QueryByAuthorName" class = "form-horizontal" role="form">
 		<div class = "form-group">
-		<label for = "AuthorName" class = "col-md-4 control-label"> Query Books Written By the Author:</label>
-			<div class = "col-md-6">
+		<label for = "AuthorName" class = "col-md-5 control-label"> Query Books Written By the Author:</label>
+			<div class = "col-md-4">
 				<input type = "text" name = "authorName" class="form-control" id="AuthorName" placeholder="Please input the Author Name">
 			</div>
 			<div class = "col-md-2">
@@ -143,7 +124,8 @@ body
     
     
     <div align="center"><br/>
-    说明：上表中的Edit按钮即为功能5更新图书信息
+    说明：上表中的Edit按钮即为功能5更新图书信息<br/>
+    本应用在1920×1080分辨率下显示效果经测试较好，其他分辨率未测试
     
     </div>
     </div>
